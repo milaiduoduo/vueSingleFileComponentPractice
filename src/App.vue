@@ -1,7 +1,7 @@
 <template>
   <div>
     <m-nav></m-nav>
-    <router-view></router-view>
+    <router-view class="center"></router-view>
   </div>
 </template>
 
@@ -13,4 +13,5 @@
 </script>
 
 <style>
+  .center{text-align: center;}
 </style>
