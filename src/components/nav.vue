@@ -17,6 +17,7 @@
         <!--<router-link to="/about/target" tag="li">taget</router-link>-->
       </ul>
     </router-link>
+    <router-link to="/document" tag="li"><a>document</a></router-link>
   </ul>
 </template>
 <script type='text/ecmascript-6'>
@@ -28,27 +29,32 @@
 <style lang="scss" type="text/css">
   .nav {
     background: #ccc;
-  >li {
-     position:relative;
-     display: inline-block;
-     width: 100px;
-     height: 30px;
-     line-height: 30px;
-     text-align: center;
-     list-style: none;
-     cursor: pointer;
-  > a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      color:#fff;
-      text-decoration: none;
-    }
+
+  >
+  li {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+
+  >
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+  }
+
   }
   }
 
-  a:link,a:hover,a:active,a:focus{
-    color:#fff;
+  a:link, a:hover, a:active, a:focus {
+    color: #fff;
   }
 
   .navLink {
@@ -58,15 +64,23 @@
 
   .nav-l2 {
     position: absolute;
-    width:100%;
-    border:1px solid #ccc;
-    border-top:none;
-  >li{
-     color:#7a7a7a;
-  &:hover,&.is-active{
-     color:#fff;
-     background: deepskyblue;
-   }
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+
+  >
+  li {
+    color: #7a7a7a;
+
+  &
+  :hover,
+
+  &
+  .is-active {
+    color: #fff;
+    background: deepskyblue;
+  }
+
   }
   }
 </style>
