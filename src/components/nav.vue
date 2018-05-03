@@ -1,7 +1,7 @@
 <template>
   <ul>
     <router-link tag="li" to="/home">home</router-link>
-    <router-link tag="li" to="/project">project</router-link>
+    <router-link active-class="navLink" tag="li" to="/project">project</router-link>
     <router-link tag="li" to="/about">about</router-link>
   </ul>
 </template>
@@ -19,7 +19,5 @@
     list-style: none;
     cursor: pointer;
   }
-  /*ul li:hover{*/
-    /*background: yellow;*/
-  /*}*/
+  .navLink{color:#fff;background: blueviolet;}
 </style>
