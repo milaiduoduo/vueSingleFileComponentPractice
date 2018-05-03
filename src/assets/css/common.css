@@ -1,0 +1,13 @@
+html,body{
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+ul,li{margin:0px;padding:0px;}
+
+.router-link-active{color:#fff;background:deepskyblue;}
+
+.is-active{
+  color:#fff;
+  background: hotpink;
+}
