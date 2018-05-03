@@ -4,12 +4,17 @@ import home from '../components/home'
 import p404 from '../components/404'
 import nav from '../components/nav'
 import otherPage from '../components/other'
+import about from '../components/about'
 
 Vue.use(VueRouter)
 let router = new VueRouter({
   mode: 'history',
   linkActiveClass: 'is-active', // 在全局设置激活的link的样式；
   routes: [
+    {
+      path: '/',
+      redirect: '/home'
+    },
     {
       path: '/nav',
       component: nav
@@ -18,6 +23,10 @@ let router = new VueRouter({
       path: '/home',
       component: home,
       alias: '/index'
+    },
+    {
+      path: '/about',
+      component: about
     },
     {
       path: '/other',
