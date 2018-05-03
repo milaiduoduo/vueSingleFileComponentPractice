@@ -1,5 +1,8 @@
 <template>
-  <div>i am about</div>
+  <div>
+    <div>i am about</div>
+    <router-view></router-view>
+  </div>
 </template>
 <script type='text/ecmascript-6'>
 

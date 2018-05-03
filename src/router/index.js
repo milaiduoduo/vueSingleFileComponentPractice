@@ -5,6 +5,9 @@ import p404 from '../components/404'
 import nav from '../components/nav'
 import otherPage from '../components/other'
 import about from '../components/about'
+import profile from '../components/profile'
+import experience from '../components/experience'
+import target from '../components/target'
 
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -26,7 +29,21 @@ let router = new VueRouter({
     },
     {
       path: '/about',
-      component: about
+      component: about,
+      children: [
+        {
+          path: 'profile',
+          component: profile
+        },
+        {
+          path: 'experience',
+          component: experience
+        },
+        {
+          path: 'target',
+          component: target
+        }
+      ]
     },
     {
       path: '/other',
