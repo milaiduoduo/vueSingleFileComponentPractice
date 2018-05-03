@@ -9,7 +9,7 @@
     <router-link exact tag="li" to="/about">
       <a>about</a>
       <ul class="nav-l2">
-        <router-link to="/about/profile" tag="li">profile</router-link>
+        <router-link to="/about" exact tag="li">profile</router-link>
         <router-link to="/about/experience" tag="li">experience</router-link>
         <router-link to="/about/target" tag="li">taget</router-link>
       </ul>

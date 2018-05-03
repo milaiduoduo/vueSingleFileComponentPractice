@@ -32,7 +32,7 @@ let router = new VueRouter({
       component: about,
       children: [
         {
-          path: 'profile',
+          path: '',
           component: profile
         },
         {
