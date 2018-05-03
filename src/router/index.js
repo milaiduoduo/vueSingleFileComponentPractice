@@ -16,7 +16,8 @@ let router = new VueRouter({
     },
     {
       path: '/home',
-      component: home
+      component: home,
+      alias: '/index'
     },
     {
       path: '/other',
@@ -25,24 +26,24 @@ let router = new VueRouter({
     {
       path: '/p404',
       component: p404
-    },
+    }
     // {
     //   path: '*',
     //   component: p404
     // }
     // ,
-    {
-      path: '*',
-      // redirect: {path: '/other'},
-      redirect: (to) => {
-        console.log(to)
-        if (to.path === '/123') {
-          return '/other'
-        } else {
-          return '/p404'
-        }
-      }
-    }
+    // {
+    //   path: '*',
+    //   // redirect: {path: '/other'},
+    //   redirect: (to) => {
+    //     console.log(to)
+    //     if (to.path === '/123') {
+    //       return '/other'
+    //     } else {
+    //       return '/p404'
+    //     }
+    //   }
+    // }
   ]
 })
 
