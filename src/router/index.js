@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import home from '../components/home'
 import p404 from '../components/404'
 import nav from '../components/nav'
+import otherPage from '../components/other'
 
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -15,13 +16,34 @@ let router = new VueRouter({
     },
     {
       path: '/home',
-      component: home
+      component: home,
+      alias: '/index'
     },
     {
-      //  给没有路由的页面，指定404路由。
-      path: '*',
+      path: '/other',
+      component: otherPage
+    },
+    {
+      path: '/p404',
       component: p404
     }
+    // {
+    //   path: '*',
+    //   component: p404
+    // }
+    // ,
+    // {
+    //   path: '*',
+    //   // redirect: {path: '/other'},
+    //   redirect: (to) => {
+    //     console.log(to)
+    //     if (to.path === '/123') {
+    //       return '/other'
+    //     } else {
+    //       return '/p404'
+    //     }
+    //   }
+    // }
   ]
 })
 
