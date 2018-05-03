@@ -3,7 +3,7 @@ html,body{
   padding: 0px;
   height: 100%;
 }
-ul,li{margin:0px;padding:0px;}
+ul,li{margin:0px;padding:0px;list-style: none;}
 
 .router-link-active{color:#fff;background:deepskyblue;}
 
