@@ -57,11 +57,16 @@ let router = new VueRouter({
     },
     {
       path: '/document',
-      components: {
-        default: documentContent,
-        content: documentContent,
-        slider: documentMenu
-      }
+      component: document,
+      children: [
+        {
+          path: '',
+          components: {
+            default: documentContent,
+            slider: documentMenu
+          }
+        }
+      ]
     },
     {
       path: '/other',
