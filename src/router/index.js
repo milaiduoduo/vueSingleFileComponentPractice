@@ -8,6 +8,9 @@ import about from '../components/about'
 import profile from '../components/profile'
 import experience from '../components/experience'
 import target from '../components/target'
+import documentMenu from '../components/documentMenu'
+import document from '../components/document'
+import documentContent from '../components/documentContent'
 
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -51,6 +54,14 @@ let router = new VueRouter({
           component: target
         }
       ]
+    },
+    {
+      path: '/document',
+      components: {
+        default: documentContent,
+        content: documentContent,
+        slider: documentMenu
+      }
     },
     {
       path: '/other',

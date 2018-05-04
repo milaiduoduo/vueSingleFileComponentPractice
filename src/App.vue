@@ -2,6 +2,7 @@
   <div>
     <m-nav></m-nav>
     <router-view class="center"></router-view>
+    <router-view name="slider"></router-view>
   </div>
 </template>
 
