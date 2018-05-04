@@ -16,6 +16,15 @@ Vue.use(VueRouter)
 let router = new VueRouter({
   mode: 'history',
   linkActiveClass: 'is-active', // 在全局设置激活的link的样式；
+  // 经过测试在vue2.5.2版本里，滚动条的位置在前进后退时，已经被浏览器(谷歌)记录，并不需要写
+  // 下面的函数。
+  // scrollBehavior(to, from, savePosition){
+  //   if (savePosition) {
+  //     return savePosition
+  //   } else {
+  //     return {x: 0, y: 0}
+  //   }
+  // },
   routes: [
     {
       path: '/',
@@ -75,11 +84,11 @@ let router = new VueRouter({
     {
       path: '/p404',
       component: p404
+    },
+    {
+      path: '*',
+      component: p404
     }
-    // {
-    //   path: '*',
-    //   component: p404
-    // }
     // ,
     // {
     //   path: '*',
