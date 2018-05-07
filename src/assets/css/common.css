@@ -11,3 +11,6 @@ ul,li{margin:0px;padding:0px;list-style: none;}
 
 a{text-decoration: none;}
 a:link,a:visited,a:hover,a:active{color:#B1B1B1;}
+
+.clear{zoom:1;}
+.clear:after{display: block;content:"";height:0;clear:both;}
