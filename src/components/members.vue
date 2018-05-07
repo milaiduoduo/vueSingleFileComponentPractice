@@ -2,12 +2,12 @@
   <div class="wrap clear">
     <h1>成员页面</h1>
     <ul class="slider">
-      <router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="'/members/' +item.type+ '/'+item.id+'?info=follow'">
-        <a>{{index + 1}}.{{item.name}}</a>
-      </router-link>
-      <!--<router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="{path:'/members/' +item.type+ '/'+item.id,query:{info:'follow'}}">-->
+      <!--<router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="'/members/' +item.type+ '/'+item.id+'?info=follow'">-->
         <!--<a>{{index + 1}}.{{item.name}}</a>-->
       <!--</router-link>-->
+      <router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="{path:'/members/' +item.type+ '/'+item.id,query:{info:'follow'}}">
+        <a>{{index + 1}}.{{item.name}}</a>
+      </router-link>
     </ul>
     <div class="content" v-if="memberInfo.name">
       <h3 class="head">详细资料</h3>
@@ -15,10 +15,10 @@
       <p>性别：{{memberInfo.sex}}</p>
       <p>工作时长：{{memberInfo.workingYear}}</p>
       <hr>
-      <router-link class="footer" to="?info=follow" exact>我的关注</router-link>
-      <router-link class="footer" to="?info=share" exact>我的分享</router-link>
-      <!--<router-link class="footer" :to="{path:'',query:{info:'follow'}}" exact>我的关注</router-link>-->
-      <!--<router-link class="footer" :to="{path:'',query:{info:'share'}}" exact>我的分享</router-link>-->
+      <!--<router-link class="footer" to="?info=follow" exact>我的关注</router-link>-->
+      <!--<router-link class="footer" to="?info=share" exact>我的分享</router-link>-->
+      <router-link class="footer" :to="{path:'',query:{info:'follow'}}" exact>我的关注</router-link>
+      <router-link class="footer" :to="{path:'',query:{info:'share'}}" exact>我的分享</router-link>
     </div>
   </div>
 </template>
