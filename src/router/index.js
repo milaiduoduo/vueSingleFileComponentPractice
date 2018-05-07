@@ -11,6 +11,7 @@ import target from '../components/target'
 import documentMenu from '../components/documentMenu'
 import document from '../components/document'
 import documentContent from '../components/documentContent'
+import members from '../components/members'
 
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -76,6 +77,9 @@ let router = new VueRouter({
           }
         }
       ]
+    }, {
+      path: '/members/:type?/:userId?',
+      component: members
     },
     {
       path: '/other',

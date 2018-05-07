@@ -7,7 +7,7 @@ ul,li{margin:0px;padding:0px;list-style: none;}
 
 .router-link-active{color:#fff;background:deepskyblue;}
 
-.is-active{
-  color:#fff;
-  background: hotpink;
-}
+.is-active{color:#fff;  background: hotpink; }
+
+a{text-decoration: none;}
+a:link,a:visited,a:hover,a:active{color:#B1B1B1;}
