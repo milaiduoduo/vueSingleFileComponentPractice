@@ -41,14 +41,16 @@ let router = new VueRouter({
       component: home,
       alias: '/index',
       meta: {
-        index: 0
+        index: 0,
+        level: 1
       }
     },
     {
       path: '/project',
       component: project,
       meta: {
-        index: 1
+        index: 1,
+        level: 1
       },
       beforeEnter(to, from, next){
         console.log(' 【2.指定路径下的路由】钩子函数');
@@ -64,7 +66,8 @@ let router = new VueRouter({
           name: 'about',
           component: profile,
           meta: {
-            index: 2
+            index: 2,
+            level: 1
           }
         },
         {
@@ -94,7 +97,8 @@ let router = new VueRouter({
             slider: documentMenu
           },
           meta: {
-            index: 3
+            index: 3,
+            level: 1
           }
         }
       ]
@@ -103,7 +107,8 @@ let router = new VueRouter({
       path: '/members/:type?/:userId?',
       component: members,
       meta: {
-        index: 4
+        index: 4,
+        level: 1
       }
     },
     {
@@ -138,7 +143,7 @@ router.beforeEach((to, from, next) => {
   console.log('【1.全局路由钩子函数】，进入导航前！')
   next() // 如果不写next()或者next(false)，则不会进入目标导航,从而也不会触发router.afterEach
   // 还可以用next重定向
-  console.log('to:', to)
+  // console.log('to:', to)
   // console.log(to.path.indexOf('project'))
   // if (to.path.indexOf('project') > 0) {
   //   next('/login') // 用next重定向
