@@ -1,17 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import home from '../components/home'
-import p404 from '../components/404'
-import nav from '../components/nav'
-import otherPage from '../components/other'
-import about from '../components/about'
-import profile from '../components/profile'
-import experience from '../components/experience'
-import target from '../components/target'
-import documentMenu from '../components/documentMenu'
-import document from '../components/document'
-import documentContent from '../components/documentContent'
-import members from '../components/members'
+import home from '@/components/home'
+import p404 from '@/components/404'
+import nav from '@/components/nav'
+import project from '@/components/project'
+import otherPage from '@/components/other'
+import about from '@/components/about'
+import profile from '@/components/profile'
+import experience from '@/components/experience'
+import target from '@/components/target'
+import documentMenu from '@/components/documentMenu'
+import document from '@/components/document'
+import documentContent from '@/components/documentContent'
+import members from '@/components/members'
 
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -38,7 +39,17 @@ let router = new VueRouter({
     {
       path: '/home',
       component: home,
-      alias: '/index'
+      alias: '/index',
+      meta: {
+        index: 0
+      }
+    },
+    {
+      path: '/project',
+      component: project,
+      meta: {
+        index: 1
+      }
     },
     {
       path: '/about',
@@ -47,7 +58,10 @@ let router = new VueRouter({
         {
           path: '',
           name: 'about',
-          component: profile
+          component: profile,
+          meta: {
+            index: 2
+          }
         },
         {
           // 让子路由，路由嵌套但路径不嵌套，只需要加上/。
@@ -74,12 +88,19 @@ let router = new VueRouter({
           components: {
             default: documentContent,
             slider: documentMenu
+          },
+          meta: {
+            index: 3
           }
         }
       ]
-    }, {
+    },
+    {
       path: '/members/:type?/:userId?',
-      component: members
+      component: members,
+      meta: {
+        index: 4
+      }
     },
     {
       path: '/other',
