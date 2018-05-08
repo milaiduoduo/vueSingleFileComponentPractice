@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <div class="wrap clear">
     <h1>成员页面</h1>
     <ul class="slider">
-      <router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="'/members/' +item.type+ '/'+item.id">
+      <!--<router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="'/members/' +item.type+ '/'+item.id+'?info=follow'">-->
+        <!--<a>{{index + 1}}.{{item.name}}</a>-->
+      <!--</router-link>-->
+      <router-link tag="li" v-for="(item,index) in userlist" :key="index" :to="{path:'/members/' +item.type+ '/'+item.id,query:{info:'follow'}}">
         <a>{{index + 1}}.{{item.name}}</a>
       </router-link>
     </ul>
@@ -11,6 +14,11 @@
       <p>姓名：{{memberInfo.name}}</p>
       <p>性别：{{memberInfo.sex}}</p>
       <p>工作时长：{{memberInfo.workingYear}}</p>
+      <hr>
+      <!--<router-link class="footer" to="?info=follow" exact>我的关注</router-link>-->
+      <!--<router-link class="footer" to="?info=share" exact>我的分享</router-link>-->
+      <router-link class="footer" :to="{path:'',query:{info:'follow'}}" exact>我的关注</router-link>
+      <router-link class="footer" :to="{path:'',query:{info:'share'}}" exact>我的分享</router-link>
     </div>
   </div>
 </template>
@@ -67,6 +75,7 @@
   }
 </script>
 <style lang='scss' rel="stylesheet/scss" scoped>
+  .wrap{height:100%;}
   .slider {
     width: 20%;
     float: left;
@@ -82,5 +91,7 @@
     .head {
       margin-top: -1px;
     }
+    .is-active{color:#fff;background:deepskyblue;}
+    .footer{padding:3px 3px;}
   }
 </style>
