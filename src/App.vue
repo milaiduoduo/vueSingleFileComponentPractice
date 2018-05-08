@@ -21,16 +21,19 @@
     },
     watch: {
       $route(to, from){
-        let toIndex = to.meta.index;
-        let fromIndex = from.meta.index;
-        console.log(toIndex, '--', fromIndex);
-        if (toIndex - fromIndex > 0) {
+       // console.log('to.meta.level:', to.meta.level);
+        if (to.meta.level === 1) {
+          let toIndex = to.meta.index;
+          let fromIndex = from.meta.index;
+//          console.log(toIndex, '--', fromIndex);
+          if (toIndex - fromIndex > 0) {
 //          说明是从左往右
-          this.nav_direction = 'right';
-        } else {
-          this.nav_direction = 'left';
+            this.nav_direction = 'right';
+          } else {
+            this.nav_direction = 'left';
+          }
+//          console.log(this.nav_direction)
         }
-        console.log(this.nav_direction)
       }
     }
   }
