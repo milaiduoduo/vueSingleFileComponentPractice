@@ -1,5 +1,5 @@
 <template>
-  <div style="height:1000px;">
+  <div>
     <p>我是简介</p>
   </div>
 </template>

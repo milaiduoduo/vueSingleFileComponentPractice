@@ -1,5 +1,5 @@
 <template>
-  <div style="height:1000px;">
+  <div>
     <h2>404，没有这个页面！！</h2>
   </div>
 </template>

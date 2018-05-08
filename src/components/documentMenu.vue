@@ -2,10 +2,8 @@
   <ul class="menu">
     <li class="first">1.es6</li>
     <li>2.es5</li>
-    <li>3.css3</li>
-    <li>4.css4</li>
-    <li>5.html5</li>
-    <li>6.html</li>
+    <li>3.css2,css3</li>
+    <li>5.html,html5</li>
     <li>7.vue</li>
     <li>8.webpack</li>
     <li>9.nodeJS</li>
@@ -24,26 +22,26 @@
 <script type='text/ecmascript-6'>
 
 </script>
-<style lang='scss' type="text/css">
-  .menu{
+<style lang='scss' rel="stylesheet/scss">
+  .menu {
     float: left;
     width: 15%;
-    height:100%;
-    border-right:1px solid deepskyblue;
-    color:deepskyblue;
+    /*height: 100%;*/
+    border-right: 1px solid deepskyblue;
+    color: deepskyblue;
     overflow-x: auto;
-    >li{
-      padding:5px 10px;
-      cursor:pointer;
-      &:hover{
-         background:deepskyblue;
-         color:#fff;
-     }
-     }
-    .first{
-        background:deepskyblue;
-        color:#fff;
+    > li {
+      padding: 5px 10px;
+      cursor: pointer;
+      &:hover {
+        background: deepskyblue;
+        color: #fff;
       }
+    }
+    .first {
+      background: deepskyblue;
+      color: #fff;
+    }
 
   }
 </style>
