@@ -49,6 +49,10 @@ let router = new VueRouter({
       component: project,
       meta: {
         index: 1
+      },
+      beforeEnter(to, from, next){
+        console.log(' 【2.指定路径下的路由】钩子函数');
+        next();
       }
     },
     {
@@ -131,7 +135,7 @@ let router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log('进入导航前！')
+  console.log('【1.全局路由钩子函数】，进入导航前！')
   next() // 如果不写next()或者next(false)，则不会进入目标导航,从而也不会触发router.afterEach
   // 还可以用next重定向
   console.log('to:', to)
@@ -144,7 +148,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach((to, from) => {
-  console.log('离开导航后！')
+  console.log('【1.全局路由钩子函数】，离开导航后！')
 })
 
 export default router
