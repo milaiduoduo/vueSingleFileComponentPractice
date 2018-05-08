@@ -130,4 +130,21 @@ let router = new VueRouter({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  console.log('进入导航前！')
+  next() // 如果不写next()或者next(false)，则不会进入目标导航,从而也不会触发router.afterEach
+  // 还可以用next重定向
+  console.log('to:', to)
+  // console.log(to.path.indexOf('project'))
+  // if (to.path.indexOf('project') > 0) {
+  //   next('/login') // 用next重定向
+  // } else {
+  //   next()
+  // }
+})
+
+router.afterEach((to, from) => {
+  console.log('离开导航后！')
+})
+
 export default router
